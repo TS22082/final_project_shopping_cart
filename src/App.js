@@ -1,5 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Products from "./Pages/Products/Products";
+import Product from "./Pages/Product/Product";
+import Cart from "./Pages/Cart/Cart";
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
@@ -12,7 +16,7 @@ function App() {
                 <Link to="/">Products</Link>
               </li>
               <li>
-                <Link to="/product/:id">Product</Link>
+                <Link to="/product/1">Product</Link>
               </li>
               <li>
                 <Link to="/cart">cart</Link>
@@ -25,16 +29,16 @@ function App() {
 
           <Switch>
             <Route exact path="/">
-              <h1>products page</h1>
+              <Products />
             </Route>
-            <Route path="/product/:id ">
-              <h1>product page</h1>
+            <Route path="/product/:id">
+              <Product />
             </Route>
             <Route path="/cart">
-              <h1>cart page page</h1>
+              <Cart />
             </Route>
             <Route path="/checkout">
-              <h1>checkout page</h1>
+              <Checkout />
             </Route>
             <Route path="/">
               <h1>404 page</h1>
