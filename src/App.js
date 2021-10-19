@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">products</Link>
+              </li>
+              <li>
+                <Link to="/products/:id">product</Link>
+              </li>
+              <li>
+                <Link to="/cart">cart</Link>
+              </li>
+              <li>
+                <Link to="/checkout">checkout</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+          <Switch>
+            <Route exact path="/">
+              <h1>products page</h1>
+            </Route>
+            <Route path="/products/:id">
+              <h1>product page</h1>
+            </Route>
+            <Route path="/cart">
+              <h1>cart page</h1>
+            </Route>
+            <Route path="/checkout">
+              <h1>cart page</h1>
+            </Route>
+            <Route path="/">
+              <h1>404 page</h1>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
