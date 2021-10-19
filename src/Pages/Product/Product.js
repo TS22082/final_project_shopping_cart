@@ -16,6 +16,7 @@ const Product = () => {
   return (
     <div>
       <h1>This is the product page</h1>
+      <h1>fixed a thing</h1>
     </div>
   );
 };
