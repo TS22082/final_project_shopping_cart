@@ -13,8 +13,9 @@ nav {
 
 .link {
   color: white;
-  color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .icon {

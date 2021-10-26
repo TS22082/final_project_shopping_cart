@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Products from "./Pages/Products/Products";
 import Product from "./Pages/Product/Product";
-import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
 import Nav from "./Components/Nav/Nav";
 import CartContext from "./Context/CartContext";
@@ -22,9 +21,6 @@ function App() {
             </Route>
             <Route path="/product/:id">
               <Product />
-            </Route>
-            <Route path="/cart">
-              <Cart />
             </Route>
             <Route path="/checkout">
               <Checkout />
